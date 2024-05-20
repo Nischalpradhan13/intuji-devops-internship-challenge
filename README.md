@@ -77,7 +77,11 @@ COPY . /var/www/html/
 
 # Expose port 80
 EXPOSE 80
+```
+### Build the Docker Image:
 
-
+````Docker build
+docker build -t nischalpdh/php-hello-world .
+````
 
 
