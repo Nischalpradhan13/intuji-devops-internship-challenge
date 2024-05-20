@@ -171,8 +171,7 @@ Save the Jenkins job configuration.
 Include screenshots and gifs of your Jenkins job running, Docker image being built, pushed to Docker Hub, and running in a container. Here’s how to add images in Markdown:
 
 ```markdown
-![Jenkins Build Success](path_to_your_image/jenkins_build_success.png)
-![Docker Hub Repository](path_to_your_image/docker_hub_repository.png)
-![Running Container](path_to_your_image/running_container.png)
+![Build Success](https://github.com/Nischalpradhan13/intuji-devops-internship-challenge/assets/117845810/14d877c2-c7c7-407f-a1dd-6fc80be10e2d)
+![Docker HuB](https://github.com/Nischalpradhan13/intuji-devops-internship-challenge/assets/117845810/a51dc718-3319-4a1f-b767-d9f366c61397)
 ```
 
