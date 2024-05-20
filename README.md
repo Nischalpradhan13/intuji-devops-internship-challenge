@@ -84,4 +84,9 @@ EXPOSE 80
 docker build -t nischalpdh/php-hello-world .
 ````
 
+### Pushing the Docker Image to Docker Hub
+Log in to Docker Hub:
+````docker login
+docker login -u <your_dockerhub_username> -p <your_dockerhub_password>
 
+````
