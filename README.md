@@ -90,3 +90,30 @@ Log in to Docker Hub:
 docker login -u <your_dockerhub_username> -p <your_dockerhub_password>
 
 ````
+Push the Docker Image:
+````push image
+docker push nischalpdh/php-hello-world
+````
+
+### Docker Compose Setup
+
+Create a docker-compose.yml File:
+````docker compose
+version: '3.8'
+
+services:
+  web:
+    image: nischalpdh/php-hello-world
+    ports:
+      - "80:80"
+
+````
+Run the Docker Compose Application:
+````
+docker-compose up -d
+````
+
+
+
+
+
