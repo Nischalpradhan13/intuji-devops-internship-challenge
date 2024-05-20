@@ -113,7 +113,54 @@ Run the Docker Compose Application:
 docker-compose up -d
 ````
 
+## Setting Up Jenkins for CI/CD
+
+### Install Jenkins:
+Follow the official Jenkins documentation to install Jenkins on your machine: [Jenkins Installation Guide](https://www.jenkins.io/doc/book/installing/)
+
+### Install Necessary Plugins:
+Install the following Jenkins plugins:
+- Git Plugin
+- Docker Pipeline Plugin
+
+### Create a Freestyle Project:
+1. Go to Jenkins Dashboard and click on "New Item".
+2. Name the project `intuji-devops-internship-challenge`.
+3. Select "Freestyle project" and click "OK".
+
+### Configure Source Code Management:
+1. Under "Source Code Management", select "Git".
+2. Enter the repository URL: `https://github.com/Nischalpradhan13/intuji-devops-internship-challenge.git`.
+3. Add credentials if necessary.
 
 
+### Add Build Steps:
 
+Under "Build", add a build step to "Execute shell" with the following commands:
 
+````
+# Log in to Docker Hub using environment variables
+echo $DOCKER_HUB_PASSWORD | docker login -u $DOCKER_HUB_USERNAME --password-stdin
+
+# Build the Docker image
+docker build -t nischalpdh/php-hello-world $WORKSPACE
+
+# Push the Docker image to Docker Hub
+docker push nischalpdh/php-hello-world
+
+# Log out of Docker Hub
+docker logout
+````
+## Configure Build Environment:
+1. Under "Build Environment", check "Use secret text(s) or file(s)".
+2. Add "Username and password (separated)" and configure it to use your Docker Hub credentials.
+3. Set the "Username Variable" to `DOCKER_HUB_USERNAME` and "Password Variable" to `DOCKER_HUB_PASSWORD`.
+
+### Save and Apply Configuration:
+Save the Jenkins job configuration.
+
+## Running the Pipeline
+1. Go to Jenkins Dashboard.
+2. Select your project (`intuji-devops-internship-challenge`).
+3. Click on "Build Now" to run the pipeline.
+4. Monitor the build process in the "Console Output" to ensure everything runs smoothly.
