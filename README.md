@@ -1,4 +1,3 @@
-# intuji-devops-internship-challenge
 
 # Intuji DevOps Internship Challenge
 
