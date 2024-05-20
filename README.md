@@ -60,3 +60,17 @@ Clone the GitHub repository to your local machine:
 ```bash
 git clone https://github.com/Nischalpradhan13/intuji-devops-internship-challenge.git
 cd intuji-devops-internship-challenge
+
+
+
+Building and Running the Docker Image
+Create a Dockerfile for the PHP Application:
+Dockerfile
+Copy code
+FROM php:7.4-apache
+
+# Copy application files to the web directory
+COPY . /var/www/html/
+
+# Expose port 80
+EXPOSE 80
