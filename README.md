@@ -164,3 +164,15 @@ Save the Jenkins job configuration.
 2. Select your project (`intuji-devops-internship-challenge`).
 3. Click on "Build Now" to run the pipeline.
 4. Monitor the build process in the "Console Output" to ensure everything runs smoothly.
+
+``
+
+## Screenshots and Gifs
+Include screenshots and gifs of your Jenkins job running, Docker image being built, pushed to Docker Hub, and running in a container. Here’s how to add images in Markdown:
+
+```markdown
+![Jenkins Build Success](path_to_your_image/jenkins_build_success.png)
+![Docker Hub Repository](path_to_your_image/docker_hub_repository.png)
+![Running Container](path_to_your_image/running_container.png)
+```
+
