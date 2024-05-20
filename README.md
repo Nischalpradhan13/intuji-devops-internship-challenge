@@ -165,13 +165,37 @@ Save the Jenkins job configuration.
 3. Click on "Build Now" to run the pipeline.
 4. Monitor the build process in the "Console Output" to ensure everything runs smoothly.
 
-``
 
-## Screenshots and Gifs
-Include screenshots and gifs of your Jenkins job running, Docker image being built, pushed to Docker Hub, and running in a container. Here’s how to add images in Markdown:
 
-```markdown
-![Build Success](https://github.com/Nischalpradhan13/intuji-devops-internship-challenge/assets/117845810/14d877c2-c7c7-407f-a1dd-6fc80be10e2d)
-![Docker HuB](https://github.com/Nischalpradhan13/intuji-devops-internship-challenge/assets/117845810/a51dc718-3319-4a1f-b767-d9f366c61397)
-```
+## Screenshots of final output
+Jenkins job build success, Docker image being built and pushed to Docker Hub
 
+![Build Success](https://github.com/Nischalpradhan13/intuji-devops-internship-challenge/assets/117845810/277ad13b-0ca0-47cd-922c-fe8c40ad64e3)
+
+
+![docker image build](https://github.com/Nischalpradhan13/intuji-devops-internship-challenge/assets/117845810/9c98e2e9-c768-443b-8592-cf00d76bd7c5)
+
+
+![Docker HuB](https://github.com/Nischalpradhan13/intuji-devops-internship-challenge/assets/117845810/0b9d4818-116e-4a91-b3be-b5a7f4047bc7)
+
+## Troubleshooting
+
+### Common Issues and Solutions
+
+#### Docker Permission Issues:
+- Ensure the Jenkins user is added to the Docker group:
+  'sudo usermod -aG docker jenkins'
+- Restart Jenkins to apply group changes: sudo systemctl restart jenkins
+
+
+ #### Docker Hub Login Issues:
+
+ - Verify that your Docker Hub credentials are correct.
+ - Ensure environment variables are correctly set in Jenkins.
+
+#### Build Failures:
+ - Check the Jenkins console output for detailed error messages.
+ - Ensure your Dockerfile and docker-compose.yml are correctly configured.
+
+## Conclusion
+ This project demonstrates how to set up a CI/CD pipeline using Docker and Jenkins. By following the steps outlined, you can automate the build, push, and deployment process for a simple PHP web application. This setup can be extended to more complex applications and workflows
