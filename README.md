@@ -62,11 +62,13 @@ git clone https://github.com/Nischalpradhan13/intuji-devops-internship-challenge
 cd intuji-devops-internship-challenge
 
 
+## Building and Running the Docker Image
 
-Building and Running the Docker Image
-Create a Dockerfile for the PHP Application:
-Dockerfile
-Copy code
+### Create a Dockerfile for the PHP Application:
+
+Create a `Dockerfile` in your project directory with the following content:
+
+```Dockerfile
 FROM php:7.4-apache
 
 # Copy application files to the web directory
@@ -74,3 +76,7 @@ COPY . /var/www/html/
 
 # Expose port 80
 EXPOSE 80
+
+
+
+
